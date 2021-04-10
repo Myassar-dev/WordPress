@@ -18,6 +18,7 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
+	
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
@@ -54,7 +55,11 @@
 				'after'  => '</div>',
 			)
 		);
+	
+		
+		the_field('details'); 
 		?>
+		<img src="<?= $post_image['url'] ?>">
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

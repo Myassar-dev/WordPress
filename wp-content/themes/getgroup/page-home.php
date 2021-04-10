@@ -77,7 +77,11 @@ get_header();
           </div>
 
         </section>
-
+<style>
+#services-section {
+  background-image: url("<?php bloginfo('template_directory') ?>/images/modern.jpg");
+}
+</style>
     <div class="site-section" id="download-section">
       <div class="container">
         <div class="row mb-5 align-items-center">
@@ -165,10 +169,10 @@ get_header();
         ?>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
-              <a href="single.html">
+              <a href="<?php the_permalink(); ?>">
                   <img src="<?= $post_image['url'] ?>" alt="Image" class="img-fluid">
              </a>
-              <h2 class="font-size-regular"><a href="single.html" class="text-dark"><?php the_field('title'); ?></a></h2>
+              <h2 class="font-size-regular"><a href="<?php the_permalink(); ?>" class="text-dark"><?php the_field('title'); ?></a></h2>
             </div>
           </div>
                
